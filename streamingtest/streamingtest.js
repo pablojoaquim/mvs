@@ -47,7 +47,7 @@
 //	server = "http://" + window.location.hostname + ":8088/janus";
 //else
 //	server = "https://" + window.location.hostname + ":8089/janus";
-server = "http://localhost:8088/janus";
+server = "http://localhost:50088/janus";
 var janus = null;
 var streaming = null;
 var opaqueId = "streamingtest-"+Janus.randomString(12);
