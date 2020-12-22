@@ -1,4 +1,4 @@
-version: '3.8'
+version: '3.2'
 networks:
   default:
     external:
@@ -14,6 +14,8 @@ services:
   webrtc-server:
           build: ./webrtc-server
           image: mvs-janus
+          ports:
+          - "8088:8088/tcp"
           networks:
             default:
               ipv4_address: 10.0.1.12
