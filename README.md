@@ -7,5 +7,5 @@ Required steps:
 
 This will launch 2 services:
 
-1 - gstreamer: Serves rtsp stream \n
+1 - gstreamer: Serves rtsp stream 
 2 - webrtc-server: Has the active Janus instance
