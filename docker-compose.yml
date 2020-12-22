@@ -7,7 +7,7 @@ services:
   gstreamer:
           image: steabert/gst-rtsp-launch:latest
           ports:
-           - "8554:8554/tcp"
+           - "50054:8554/tcp"
           networks:
            default:
             ipv4_address: 10.0.1.11
@@ -15,7 +15,7 @@ services:
           build: ./webrtc-server
           image: mvs-janus
           ports:
-          - "8088:8088/tcp"
+          - "50088:8088/tcp"
           networks:
             default:
               ipv4_address: 10.0.1.12
