@@ -1,0 +1,21 @@
+version: '3.8'
+networks:
+  default:
+    external:
+      name: local_network_dev
+services:
+  gstreamer:
+          image: steabert/gst-rtsp-launch:latest
+          ports:
+           - "8554:8554/tcp"
+          networks:
+           default:
+            ipv4_address: 10.0.1.11
+  webrtc-server:
+          build: ./webrtc-server
+          image: mvs-janus
+          networks:
+            default:
+              ipv4_address: 10.0.1.12
+          depends_on:
+            - gstreamer
